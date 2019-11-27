@@ -81,10 +81,12 @@ $stmt->execute(['start_letter' => $start_letter,'status_id' => $status_id]);
             <td><?php echo $row['username'] ?></td>
             <td><?php echo $row['email'] ?></td>
             <td><?php echo $row['status'] ?></td>
+			<td><?php if($rom['status_id']!="3") {
+				echo '<a delete="ask deletion" href="all_user.php">Ask deletion</a>';
+			} ?>
+			</td>
         </tr>
-    <?php } ?>
 </table>
-
 
 </body>
 </html>
